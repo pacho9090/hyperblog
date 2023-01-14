@@ -49,3 +49,6 @@ git log archivo.extensión: muestra la historia del archivo
 
 $git reset <tag> --hard
 $git reset <tag> --soft
+
+* para ver como era un archivo en especifico:
+    1. $git checkout <tag> archivo
