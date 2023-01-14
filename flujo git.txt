@@ -1,0 +1,8 @@
+Flujo de tareas en GIT:
+
+1. Crear repositorio
+2. $ git init -- Para iniciar el repositorio
+3. Agregar archivos
+4. $ git add <archivo> -- para agregar un archivo
+4.1 $ git add . -- para agregar varios archivos
+5. $ git commit - m "mensaje" -- para hacer commit con un mensaje
