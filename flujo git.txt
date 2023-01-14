@@ -1,8 +1,51 @@
+
+
 Flujo de tareas en GIT:
 
 1. Crear repositorio
 2. $ git init -- Para iniciar el repositorio
 3. Agregar archivos
-4. $ git add <archivo> -- para agregar un archivo
+4. $ git add <archivo> -- para agregar un archivo a area de stagging en RAM
 4.1 $ git add . -- para agregar varios archivos
-5. $ git commit - m "mensaje" -- para hacer commit con un mensaje
+5. $ git commit - m "mensaje" -- para hacer commit con un mensaje, cuando se hace commit se envia el archivo al repositorio (Master)
+6. $ git log -- para ver el historial de cambios del repositorio
+
+// comandos clave
+
+git init: inicializar el repositorio
+git add nombre_de_archivo.extensión: agregar el archivo al repositorio
+git commit -m “Mensaje”: Agregamos los cambios para el repositorio
+git add: Agregar los cambios de la carpeta en la que nos encontramos agregar todo
+git status: visualizar cambios
+git log nombre_de_archivos.extensión: histórico de cambios con detalles
+git push: envía a otro repositorio remoto lo que estamos haciendo
+git pull: traer repositorio remoto
+ls: listado de carpetas en donde me encuentro. Es decir, como emplear dir en windows.
+pwd: ubicación actual
+mkdir: make directory nueva carpeta
+touch archivo.extensión: crear archivo vacío
+cat archivo.extensión: muestra el contenido del archivo
+history: historial de comandos utilizados durante esa sesión
+rm archivo.extensión: Eliminación de archivo
+comando --help: ayuda sobre el comando
+git checkout: traer cambios realizados
+git rm --cached archivo.extensión: se utiliza para devolver el archivo que se tiene en ram. Cuando escribimos git add, lo devuelve a estado natural mientras está en stagging.
+git config --list: muestra la lista de configuración de git
+git config --list --show-origin: rutas de acceso a la configuración de git
+git log archivo.extensión: muestra la historia del archivo
+
+//
+
+* Si se hace un $git commit sin mensaje, se abrira una ventana con el visor de texto VIM solicitando que se ingrese un mensaje, para salir de ahi se debe hacer "esc shift +z+z", lo cual guarda el mensaje en VIM
+
+*Para ver las diferencias entre varios Tags, se hace $git diff <tag1> <tag2>
+
+*Estados: 
+    1. cuando a un archivo no se le ha dado "add", el archivo esta en estado "Untracked", Stagging es un area temporal donde se guardan en memoria RAM los cambios antes de ser enviados al repositorio
+    2. cuando se le da "add", el archivo pasa a Stagging, y pasa a estado "Tracked"
+    3. Cuando se hace commit, los cambios van a la rama Master y se les asigna un Tag a cada cambio
+
+*Volver a una version anterior: para volver a una version anterior se pueden hacer dos tipos de "reset", el duro y el suave, en el duro se lleva todo al estado "anterior" dado por parametro, en el suave, se vuelve al estado anterior, pero se tienen aun en stagging todos los cambios anteriores para ser usados en un proximo commit
+
+$git reset <tag> --hard
+$git reset <tag> --soft
