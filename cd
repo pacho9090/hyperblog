@@ -1,0 +1,67 @@
+[33mcommit d062af424a535216e323b812959120e9669fef83[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Francisco Pizarro <franciscopizarro9090@gmail.com>
+Date:   Tue Jan 24 19:41:10 2023 -0500
+
+    Commit al master del blogpost en su version mas reciente
+
+ blogpost.html   | 16 [32m++++++++++[m[31m------[m
+ css/estilos.css | 17 [32m+++++++++++++++[m[31m--[m
+ 2 files changed, 25 insertions(+), 8 deletions(-)
+
+[33mcommit 04fe391fcd1f6b38c9b7852778c7f3e2495b693a[m
+Author: Francisco Pizarro <franciscopizarro9090@gmail.com>
+Date:   Sat Jan 14 23:36:51 2023 -0500
+
+    cambio de estilos
+
+ blogpost.html   | 5 [32m+++[m[31m--[m
+ css/estilos.css | 2 [32m+[m[31m-[m
+ 2 files changed, 4 insertions(+), 3 deletions(-)
+
+[33mcommit a3bf3640bc902de794db4c3194260e4faba1fa68[m
+Author: Francisco Pizarro <franciscopizarro9090@gmail.com>
+Date:   Sat Jan 14 11:09:31 2023 -0500
+
+    ultimos cambios en aprendizaje en platzi
+
+ flujo git.txt | 3 [32m+++[m
+ historia.txt  | 2 [32m+[m[31m-[m
+ 2 files changed, 4 insertions(+), 1 deletion(-)
+
+[33mcommit 2916e449a9b2a344b3ed2e1c60f3663a50443626[m
+Author: Francisco Pizarro <franciscopizarro9090@gmail.com>
+Date:   Sat Jan 14 11:02:46 2023 -0500
+
+    arranco mi proyecto real con HTML y CSS
+
+ blogpost.html   | 14 [32m++++++++++++++[m
+ css/estilos.css |  6 [32m++++++[m
+ 2 files changed, 20 insertions(+)
+
+[33mcommit fa5687ec9c41bc6d65204af9081ad9fdf5bf0cff[m
+Author: Francisco Pizarro <franciscopizarro9090@gmail.com>
+Date:   Sat Jan 14 10:46:11 2023 -0500
+
+    se vuelve a cargar la info perdida
+
+ flujo git.txt | 47 [32m+++++++++++++++++++++++++++++++++++++++++++++[m[31m--[m
+ 1 file changed, 45 insertions(+), 2 deletions(-)
+
+[33mcommit 38a83aa7a586e0e7b7669d78e58151db1348b51b[m
+Author: Francisco Pizarro <franciscopizarro9090@gmail.com>
+Date:   Sat Jan 14 09:50:13 2023 -0500
+
+    agregado de archivo de flujo de tareas en git
+
+ flujo git.txt | 8 [32m++++++++[m
+ historia.txt  | 4 [32m+++[m[31m-[m
+ 2 files changed, 11 insertions(+), 1 deletion(-)
+
+[33mcommit 1df6e60a472bde12683e57a826b39b4af22e9eac[m
+Author: Francisco Pizarro <franciscopizarro9090@gmail.com>
+Date:   Sat Jan 14 09:42:43 2023 -0500
+
+    Este es el primer commit
+
+ historia.txt | 1 [32m+[m
+ 1 file changed, 1 insertion(+)

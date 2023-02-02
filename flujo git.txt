@@ -52,3 +52,22 @@ $git reset <tag> --soft
 
 * para ver como era un archivo en especifico:
     1. $git checkout <tag> archivo
+
+Si se quiere volver a la versión actual (actual)
+    1. $git checkout master archivo
+
+*TRUCO: si hay un archivo al que anteriormente se le habia hecho "add", se puede tomar un atajo para hacer el "add" y el "commit" solo con un comando
+    git commit -am "MENSAJE"
+
+*TRUCO: para saber en que rama se esta trabajando se da:
+    git show
+
+CREACION DE RAMAS:
+    git branch NOMBRE_RAMA
+
+MOVERSE A OTRA RAMA:
+    git checkout NOMBRE_RAMA
+
+HACER MERGE: para hacer "merge" se debe ubicar con "checkout" en la rama master, para llevar asi los cambios hechos en las otras ramas alli, al hacerlo asi, se hace un nuevo commit en master, el cual va a traer el ultimo commit de master y el ultimo commit de la otra rama y los va a fusionar. Cuando se hace merge, muere la rama auxiliar y todo queda integrado en master.
+    git merge NOMBRE_RAMA (estando en master)
+
