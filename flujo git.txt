@@ -1,4 +1,16 @@
 
+TRUCOS!!!!!
+
+Salir de VIM: ESC - :qw + ENTER
+
+CREAR ENTORNO virtual
+    1.python -m venv NOMBRE_ENTORNO
+    2.Para verificar porner "ls NOMBRE_ENTORNO"
+    3.Para activarlo ".\NOMBRE_ENTORNO\Scripts\activate"
+    4.Para salir del entonor poner: "deactivate
+    5.Para no tener que poner toda la instrucción de activar el entorno virtual se puede poner un alias
+        alias cosaAlias = .\NOMBRE_ENTORNO\Scripts\activate
+
 
 Flujo de tareas en GIT:
 
@@ -71,3 +83,23 @@ MOVERSE A OTRA RAMA:
 HACER MERGE: para hacer "merge" se debe ubicar con "checkout" en la rama master, para llevar asi los cambios hechos en las otras ramas alli, al hacerlo asi, se hace un nuevo commit en master, el cual va a traer el ultimo commit de master y el ultimo commit de la otra rama y los va a fusionar. Cuando se hace merge, muere la rama auxiliar y todo queda integrado en master.
     git merge NOMBRE_RAMA (estando en master)
 
+RESOLUCION DE CONFLICTOS
+    cuando se hacen cambios en la misma linea en dos ramas y se hace un merge, git va a lanzar un error de compativilidad y no va a dejar hacer el merge, VS va a subrayar el error y va a perdir que se uniformizen los archivos correspondientes en las dos ramas
+
+CREAR REPOSITORIO WEB
+    1) crear ek repositorio en GitHub
+    2) copiar la direccion del repositorio (code)
+    3) ir a git y poner en la rama master:
+        $git remote add origin RUTA_URL
+    4) para corroborar:
+        $ git remote --  va a dar "origin"
+        $ git remote -v -- Va a dar la direccion URL tal como es de origin
+    5) Primero hacer pull:
+        $ git pull origin master
+
+        si hay problema con "refusing to merge unrelated histories se pone:
+            $git pull origin master --allow-unrelated-histories
+    5) hacer push para enviar los archivos/cambios al repositorio virtual con:
+        $ git push origin master
+    6) puedo hacer cambios directamente en los archivos desde Github, y para eso se debe hacer:
+        $git pull origin master    
