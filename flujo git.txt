@@ -102,4 +102,16 @@ CREAR REPOSITORIO WEB
     5) hacer push para enviar los archivos/cambios al repositorio virtual con:
         $ git push origin master
     6) puedo hacer cambios directamente en los archivos desde Github, y para eso se debe hacer:
-        $git pull origin master    
+        $git pull origin master
+
+TAGS:
+    Un tag es una etiqueta para un commit, la cual se puede usar para identificar un punto especifico del desarrollo
+
+    1) Crear un Tag:  git tag -a v0.1 -m "Resultado de primera version de historia" d062af4
+    2) Ver lista de tags: git tag
+    3) ver detalle de tags: git show-ref --tags
+    4) empujar al repositorio los tags: git push origin --tags
+    5) borrar un tag: git tag -d  nombre_tag; sin embargo ahí todavia va a estar en el repositorio virtual
+    6) borrar tag de manera definitiva:
+        1. Borrar tag con: git tag -d  nombre_tag
+        2. Enviar el borrao total al repositorio: git push origin :refs/tags/nombre_tag
