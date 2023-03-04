@@ -115,3 +115,9 @@ TAGS:
     6) borrar tag de manera definitiva:
         1. Borrar tag con: git tag -d  nombre_tag
         2. Enviar el borrao total al repositorio: git push origin :refs/tags/nombre_tag
+
+Manejo de Ramas:
+
+    1) git branch: muestra la lista de ramas
+    2) git show-branch --all: muestra la historia de las ramas
+    3) gitk: muestra toda la historia de las ramas de manera visual
