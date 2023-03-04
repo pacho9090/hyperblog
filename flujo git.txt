@@ -2,6 +2,9 @@
 TRUCOS!!!!!
 
 Salir de VIM: ESC - :qw + ENTER
+Salir del Log: q
+
+URL: ~/OneDrive/Escritorio/Maestria_Ciencia_Datos/Ejercicios_Python/Proyecto1Git
 
 CREAR ENTORNO virtual
     1.python -m venv NOMBRE_ENTORNO
@@ -117,7 +120,28 @@ TAGS:
         2. Enviar el borrao total al repositorio: git push origin :refs/tags/nombre_tag
 
 Manejo de Ramas:
+    Se crean ramas especificas para los Features que se quieren incluir a produccion
 
-    1) git branch: muestra la lista de ramas
-    2) git show-branch --all: muestra la historia de las ramas
-    3) gitk: muestra toda la historia de las ramas de manera visual
+    1) $git branch: muestra la lista de ramas
+    2) $git show-branch --all: muestra la historia de las ramas
+    3) $gitk: muestra toda la historia de las ramas de manera visual
+
+HACER MERGE:
+    1) Ir a la rama maestra
+    2) $git pull origin master -- Para asegurarse de estar actualizado con los cambios hechos en el repo virtual
+    3) Se hace el Code Review
+    4) $git merge NOMBRE_RAMA -- Hacer el merge entre master y la rama objetivo
+    5) $git push origin master -- Manda los cambios del merge a master hacia el repo virtual
+    
+HACER PULL REQUEST:
+    -En la vida real no todo el mundo tiene acceso a hacer merge con master, ya que master es la rama del servidor de produccion, por eso se tiene otra rama que se denomina "Stagging Develope", ahi se tiene un servidor de pruebas.
+    -Cuando ya se tiene la rama del Feature terminada, se manda a un lugar intermedio entre la rama y Develope, este sitio se conoce como "Pull Request", es un estado intermedio antes de enviar el merge a Develope.
+    -En el Pull Request otros miembros del equipo ven los cambios hechos en la rama, se evaluan y se aprueban, cuando se aprueban, se ejecuta el merge con develope.
+    -El pull request no es una caracteristica de Git, si no de GitHub
+    -El encargado de hacer la verificacion de los Pull Request es el DevOps (Developer Operations), el cual es un administrador del enterno de desarrollo.
+
+    1) se hace el merge entre la rama de del Feature y develope.
+    2) El DevOps va a GitHub, se para en Develope, y selecciona "Compare & Pull Request"
+    3) Analiza los cambios hechos
+    -El Pull Request no ejecuta el merge como tal, solo revisa que esta pasando.
+    4) Si esta OK, se selecciona "Create Pull Request"
