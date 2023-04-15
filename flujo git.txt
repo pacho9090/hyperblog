@@ -145,3 +145,15 @@ HACER PULL REQUEST:
     3) Analiza los cambios hechos
     -El Pull Request no ejecuta el merge como tal, solo revisa que esta pasando.
     4) Si esta OK, se selecciona "Create Pull Request"
+    5) El DevOps acepta el Pull Request y hace el merge en GitHub, se puede eliminar la rama si no se va a usar mas.
+
+HACER UN FORK:
+    -Si alguien no es colaborador del proyecto en GitHub, este puede clonar el proyecto, pero no puede hacer Push de ningun cambio, no puede crear Tags ni Ramas, sin embargo, si podria hacer cambios en el clon y podria solicitar que se fusionen sus cambios al proyecto.
+    -Se hace el fork en git GitHub
+    -Se va al local en la carpeta donde se quiere hacer el clon
+    -$git clone URL(repositorio a clonar)
+    -Hacer los cambios
+    -Hacer el commit
+    -Hacer el push al repositorio CLONADO
+    -En Git Hub hacer el PULL REQUEST
+     
