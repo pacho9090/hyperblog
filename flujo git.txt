@@ -1,7 +1,8 @@
 
 TRUCOS!!!!!
 
-Salir de VIM: ESC - :qw + ENTER
+Salir de VIM: ESC, luego :w y luego :qw
+w + ENTER
 Salir del Log: q
 
 URL: ~/OneDrive/Escritorio/Maestria_Ciencia_Datos/Ejercicios_Python/Proyecto1Git
@@ -118,12 +119,13 @@ TAGS:
         1. Borrar tag con: git tag -d  nombre_tag
         2. Enviar el borrao total al repositorio: git push origin :refs/tags/nombre_tag
 
-Manejo de Ramas:
+MANEJO DE RAMAS:
     Se crean ramas especificas para los Features que se quieren incluir a produccion
 
     1) $git branch: muestra la lista de ramas
     2) $git show-branch --all: muestra la historia de las ramas
     3) $gitk: muestra toda la historia de las ramas de manera visual
+    4) $git branch -D NOMBRE_RAMA: Borra la rama
 
 HACER MERGE:
     1) Ir a la rama maestra
@@ -159,4 +161,32 @@ HACER UN FORK:
 AGREGAR ARCHIVOS QUE SE DEBEN IGNORAR EN EL REPOSITORIO
     -Si se quiere tener un archivo en la raiz del proyecto, pero que no se publique por tema de seguraridad (claves), o si es un archivo binario, se debe guardar ese archivo como: .gitignore
 
-     
+STASH: PARA GUARDAR CAMBIOS DE MANERA TEMPORAL Y PODER CAMBIAR DE RAMAS
+    -Si hace un cambio y se quiere guardar de manera temporal y cambiar de rama, por ejemplo, se va a hacer un pequeño experimiento se hace: 
+        -git stash
+    -para ver la información del ultimo commit al cual se quiere stashear se usa:
+        -git stash list
+    -Sirve para hacer pequeños experimentos y no amerita hacer una nueva rama
+
+GIT CLEAN: PARA BORRAR ARCHIVOS QUE NO DEBEN ESTAR EN EL REPOSITORIO
+    -git clean: va a pedir una autorizacion para borrar los archivos.
+    -git clean --dry-run: va a hacer una "simulacion" de que archivos se van a borrar
+    -git clean -f: confirma el borrado del "dry run"
+    
+GIT CHERRY-PICK: Sirve para cuando en una rama de desarrollo se han hecho varios commits, y solo se quiere incorporar uno de esos commints, NO TODOS, a Master
+    1) Ir a rama de donde se va a tomar el commit (rama desarrollo)
+    2) git log --oneline: para ver el log de los commits
+    3) copiar el hash del commit
+    4) ir a master
+    5) $git cherry-pick HASH (hash del commit)
+
+GIT REFLOG
+    -Siver para ver el historico de TODO, si la embarre con algo, por aqui lo puedo intentar recuperar.
+    -Si hay un problema grave, por ejemplo, se borro un archivo clave, luego se hizo commit, luego se hizo merge con otra rama y todo se fue al carajo:
+        1) ir a master
+        2) $git reflog 
+        3) Encontrar el HEAD (checkpoint) anterior a la cagada donde todo estaba bien.
+        4) copiar el hash del HEAD
+        5) $git reset --hard hash
+
+
