@@ -99,7 +99,6 @@ CREAR REPOSITORIO WEB
         $ git remote -v -- Va a dar la direccion URL tal como es de origin
     5) Primero hacer pull:
         $ git pull origin master
-
         si hay problema con "refusing to merge unrelated histories se pone:
             $git pull origin master --allow-unrelated-histories
     5) hacer push para enviar los archivos/cambios al repositorio virtual con:
@@ -156,4 +155,8 @@ HACER UN FORK:
     -Hacer el commit
     -Hacer el push al repositorio CLONADO
     -En Git Hub hacer el PULL REQUEST
+
+AGREGAR ARCHIVOS QUE SE DEBEN IGNORAR EN EL REPOSITORIO
+    -Si se quiere tener un archivo en la raiz del proyecto, pero que no se publique por tema de seguraridad (claves), o si es un archivo binario, se debe guardar ese archivo como: .gitignore
+
      
