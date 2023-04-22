@@ -159,4 +159,15 @@ HACER UN FORK:
 AGREGAR ARCHIVOS QUE SE DEBEN IGNORAR EN EL REPOSITORIO
     -Si se quiere tener un archivo en la raiz del proyecto, pero que no se publique por tema de seguraridad (claves), o si es un archivo binario, se debe guardar ese archivo como: .gitignore
 
-     
+STASH: PARA VOLVER A CHECKPOINT SI SE COMETIO UN ERROR
+    -Si se comete un error en el codigo y se quiere hacer "ctrl + z", se hace: 
+        -git stash
+    -para ver la información del ultimo commit al cual se quiere stashear se usa:
+        -git stash list
+    -Sirve para hacer pequeños experimentos y no amerita hacer una nueva rama
+
+GIT CLEAN: PARA BORRAR ARCHIVOS QUE NO DEBEN ESTAR EN EL REPOSITORIO
+    -git clean: va a pedir una autorizacion para borrar los archivos.
+    -git clean --dry-run: va a hacer una "simulacion" de que archivos se van a borrar
+    -git clean -f: confirma el borrado del "dry run"
+    
